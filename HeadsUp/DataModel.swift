@@ -7,14 +7,27 @@
 
 import SwiftUICore
 
+struct Deck: Identifiable, Codable {
+    let id: String
+    let name: String
+    let description: String
+    let imageName: String?
+    let favorite: Bool?
+}
+
+struct Card: Identifiable, Codable {
+    let id: String
+    let item: String
+    let deckId: String
+}
 
 func getData() -> [Deck] {
     // temporary method of getting random data
-    let numDecks = Int.random(in: 10...20)
+    let numDecks = Int.random(in: 20...30)
     var data: [Deck] = []
     for i in 0..<numDecks {
         let s = "Deck \(i)"
-        data.append(Deck(name: s, description: "a description"))
+        data.append(Deck(id: s, name: s, description: "a description", imageName: nil, favorite: nil))
     }
     return data
 }
