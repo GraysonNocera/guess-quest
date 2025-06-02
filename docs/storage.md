@@ -55,3 +55,6 @@ use CoreData. SwiftData seems too new. As a result, we will be running
 with a __SQLite__ database, hosted locally on the device. However, 
 for user preferences such as light/dark mode, default timer length, sound,
 vibrations, and tilt/touch, we will use __UserDefaults__.
+
+# SQL tables
+- See [lucid chart diagram](https://lucid.app/lucidchart/7580ac0b-0a0f-4eea-8ccd-add6a2d1bc92/edit?beaconFlowId=D1DFAF671F1B6918&invitationId=inv_c5e6712e-721e-43ba-8c0f-30453f4d4994&page=0_0)

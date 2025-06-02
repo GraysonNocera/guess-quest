@@ -50,10 +50,13 @@ and a solution can be crafted with little ambiguity.
 - A deck must contain a name.
 - A deck name shall not exceed 100 unicode characters.
 - A deck may contain a description.
-- A deck description, if it has one, shall not exceed 150 words.
+- A deck description, if it has one, shall not exceed 1500 characters.
 - A deck may contain an image.
 - A deck must contain a list of cards that shall be longer than 0 but not exceed 500 items in length.
 - A card must contain text that shall be longer than 0 but but not exceed 150 unicode characters in length.
+- A user shall be able to create a custom deck.
+- The number of custom decks that the user can create shall not exceed 50.
+- 
 
 # User Preferences Options
 - light/dark mode
@@ -73,11 +76,59 @@ and a solution can be crafted with little ambiguity.
 # Rollout plan
 
 ## Phase 1
-See GitHub.
+
+### Screens
+- Main Menu
+- Settings Page
+- Deck Creation
+- Deck Menu (from clicking on a deck)
+- Deck Play Sequence
+
+## Pop-ups
+- Deck deletion pop-up
+- Maximum custom decks toast message
+
+### Buttons/Navigation
+- Main Menu -> Settings Page
+- Main Menu -> Deck Creation
+- Main Menu -> Deck Menu
+- Deck Menu -> Deck Play Sequence
+- Deck Menu -> Deck Creation
+- Deck Menu -> Deck deletion pop-up
+
+### Schema
+```
+Deck:
+    id: ID
+    name: string
+    description: string?
+    cards: [string]
+```
+
+### User Preferences
+- default time for a round
 
 ## Phase 2
 
+### Additional Features
+- Favoriting a deck
+- Sharing a deck
+
+### Additional User Preferences
+- sound on/off
+- vibrations
+- tilt/touch
+
 ## Phase 3
+
+### Additional Features
+- Adding an image to a deck
+- Saving rounds and such
+
+### Additional User Preferences
+- Video
+- Light/dark mode (default to system)
+
 
 ## Background
 [Context and history of the project]
